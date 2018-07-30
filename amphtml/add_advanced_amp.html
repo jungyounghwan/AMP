@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html amp lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <link rel="canonical" href="../canonical/add_advanced.html">
+    <link rel="amphtml" href="../amphtml/add_advanced_amp.html">
+    <link rel="shortcut icon" href="../images/amp_favicon.png">
+    <title>News Article</title>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+        body {width:auto;margin:0;padding:0;box-sizing:border-box}
+        header {background:Tomato;color:white;font-size:2em;text-align:center;}
+        .home-button {margin-top:8px;}
+        .headerbar {height:50px;position:fixed;z-index:999;top:0;width:100%;display:flex;align-items:center;}
+        .site-name {flex:1;margin-left:-36px;}
+        h1 {margin:0;padding:0.5em;background:white;box-shadow:0px 3px 5px grey;}
+        h2 {margin:20px 0 10px;padding:0.5em;border-bottom:1px dotted #ddd}
+        p {padding:0.5em;margin:0.5em;}
+        .box_fixedblock:after {display:table;table-layout:fixed;clear:both;content:""}
+        .box_fixedblock div.fixedblock {float:left;margin:8px 0;padding:1%;height:45%;width:45%;border:1px solid #eee;background-color:yellow;}
+        .box_fixedblock div.fixedblock:nth-child(2n) {float:right;}
+        amp-fit-text {white-space: normal;}
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script> <!-- 광고 삽입 --> <!-- [js-bug] https://github.com/ampproject/amphtml/issues/16052 -->
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script> <!-- youtube 삽입 -->
+    <script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script> <!-- Tweet 삽입 -->
+    <script async custom-element ="amp-fit-text" src ="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script > <!-- 반응형 글꼴 크기 조정 -->
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script> <!-- 이미지 슬라이드 -->
+    <!-- data test : https://search.google.com/structured-data/testing-tool/u/0/ -->
+    <script type="application/ld+json">
+    {
+     "@context": "http://schema.org/",
+     "@type": "Article",
+     "mainEntityOfPage":{
+       "@type":"WebPage",
+       "@id":"http://www.saramin.co.kr"
+     },
+     "headline": "business information",
+     "image": {
+       "@type": "ImageObject",
+       "url": "http://www.saraminbanner.co.kr//index/2017/12/p0vwca_pmm9-2rvxu5_p0mrmt6mb82rvxu5occ7spnewsubpng.png",
+       "height": 110,
+       "width": 230
+     },
+     "datePublished": "2018-07-30",
+     "dateModified": "2018-07-30",
+     "author": {
+       "@type": "Person",
+       "name": "Jung"
+     },
+     "publisher": {
+       "@type": "Organization",
+       "name": "⚡ AMP SRI UI Team",
+       "logo": {
+         "@type": "ImageObject",
+         "url": "http://www.saraminbanner.co.kr//index/2017/12/p0vwca_pmm9-2rvxu5_p0mrmt6mb82rvxu5occ7spnewsubpng.png"
+       }
+     },
+     "description": "My first experience in an AMP world"
+    }
+    </script>
+</head>
+<body>
+<header class="headerbar">
+    <a href="/index.html">
+        <amp-img class="home-button" src="../images/ico/home.png" width="36" height="36"></amp-img>
+    </a>
+    <div class="site-name">News Site</div>
+</header>
+<article>
+    <h1>Article Name</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas tortor sapien, non tristique ligula accumsan eu.</p>
+
+    <h2>amp-img</h2>
+    <amp-img src="../images/mountains.jpg" layout="responsive" width="266" height="150"></amp-img>
+
+    <h2>amp-ad</h2>
+    <amp-ad width ="300" height="250" type="doubleclick" data-slot="/35096353/amptesting/image/static"></amp-ad>
+
+    <h2>amp-youtube</h2>
+    <amp-youtube data-videoid="npum8JsITQE" layout="responsive" width="480" height="270">
+        <div fallback>
+            <p>The video could not be loaded.</p>
+        </div>
+    </amp-youtube>
+
+    <h2>amp-twitter</h2>
+    <amp-twitter width="486" height="657" layout="responsive" data-tweetid="638793490521001985"></amp-twitter>
+
+    <h2>amp-fit-text</h2>
+    <div class="box_fixedblock">
+        <div class="fixedblock">
+            <amp-fit-text width="300" height="200" layout="responsive">Lorem ipsum dolor sit amet, has nisl nihil convenire et, vim at aeque inermis reprehendunt.</amp-fit-text>
+        </div>
+        <div class="fixedblock">
+            <amp-fit-text width="200" height="200" layout="responsive">Lorem ipsum dolor sit amet, has nisl nihil convenire et, vim at aeque inermis reprehendunt.</amp-fit-text>
+        </div>
+        <div class="fixedblock">
+            <amp-fit-text width="300" height="200" layout="responsive" min-font-size="30">Lorem ipsum dolor sit amet, has nisl nihil convenire et, vim at aeque inermis reprehendunt.</amp-fit-text>
+        </div>
+        <div class="fixedblock">
+            <amp-fit-text width="300" height="200" layout="responsive" max-font-size="10">Lorem ipsum dolor sit amet, has nisl nihil convenire et, vim at aeque inermis reprehendunt.</amp-fit-text>
+        </div>
+        <div class="fixedblock">
+            <amp-fit-text height="200" layout="fixed-height">Lorem ipsum dolor sit amet, has nisl nihil convenire et, vim at aeque inermis reprehendunt.</amp-fit-text>
+        </div>
+    </div>
+
+    <h2>amp-carousel : carousel</h2>
+    <amp-carousel layout="fixed-height" height="168" type="carousel">
+        <amp-img src="../images/mountains-1.jpg" width="300" height="168"></amp-img>
+        <amp-img src="../images/mountains-2.jpg" width="300" height="168"></amp-img>
+        <amp-img src="../images/mountains-3.jpg" width="300" height="168"></amp-img>
+    </amp-carousel>
+
+    <h2>amp-carousel : slides</h2>
+    <amp-carousel layout="fixed-height" height="168" type="slides" autoplay delay="2000" loop>
+        <amp-img src="../images/mountains-1.jpg" width="300" height="168"></amp-img>
+        <amp-img src="../images/mountains-2.jpg" width="300" height="168"></amp-img>
+        <amp-img src="../images/mountains-3.jpg" width="300" height="168"></amp-img>
+    </amp-carousel>
+
+    <h2>amp-carousel : etc</h2>
+    <amp-carousel layout="fixed-height" height="168" type="carousel">
+        <amp-img src="../images/blocky-mountains-1.jpg" width="300" height="250"></amp-img>
+        <amp-ad width ="300" height="250" type="doubleclick" data-slot="/35096353/amptesting/image/static"></amp-ad>
+        <amp-fit-text width="300" height="250" layout="fixed">
+            Big, bold article quote goes here.
+        </amp-fit-text>
+    </amp-carousel>
+</article>
+</body>
+</html>

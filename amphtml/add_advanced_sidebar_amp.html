@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html amp lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <link rel="canonical" href="../canonical/add_advanced_sidebar.html">
+    <link rel="amphtml" href="../amphtml/add_advanced_sidebar_amp.html">
+    <link rel="shortcut icon" href="../images/amp_favicon.png">
+    <title>News Article</title>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+        body {width:auto;margin:0;padding:0;box-sizing:border-box}
+        header {background:Tomato;color:white;font-size:2em;text-align:center;}
+        .headerbar {height:50px;position:fixed;z-index:999;top:0;width:100%;display:flex;align-items:center;}
+        .site-name {flex:1;margin-left:-36px;}
+        .hamburger {padding-left:10px;}
+        amp-sidebar {width:50%;}
+        .sidebar {padding:10px;margin:0;}
+        .sidebar > li {list-style:none;margin-bottom:10px;}
+        .sidebar a {text-decoration:none;}
+        .close-sidebar {font-size:1.5em;padding-left:5px;}
+        h1 {margin:0;padding:0.5em;background:white;box-shadow:0px 3px 5px grey;}
+        h2 {margin:20px 0 10px;padding:0.5em;border-bottom:1px dotted #ddd}
+        p {padding:0.5em;margin:0.5em;}
+        .box_fixedblock:after {display:table;table-layout:fixed;clear:both;content:""}
+        .box_fixedblock div.fixedblock {float:left;margin:8px 0;padding:1%;height:45%;width:45%;border:1px solid #eee;background-color:yellow;}
+        .box_fixedblock div.fixedblock:nth-child(2n) {float:right;}
+        amp-fit-text {white-space: normal;}
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script> <!-- sidebar -->
+    <!-- data test : https://search.google.com/structured-data/testing-tool/u/0/ -->
+    <script type="application/ld+json">
+    {
+     "@context": "http://schema.org/",
+     "@type": "Article",
+     "mainEntityOfPage":{
+       "@type":"WebPage",
+       "@id":"http://www.saramin.co.kr"
+     },
+     "headline": "business information",
+     "image": {
+       "@type": "ImageObject",
+       "url": "http://www.saraminbanner.co.kr//index/2017/12/p0vwca_pmm9-2rvxu5_p0mrmt6mb82rvxu5occ7spnewsubpng.png",
+       "height": 110,
+       "width": 230
+     },
+     "datePublished": "2018-07-30",
+     "dateModified": "2018-07-30",
+     "author": {
+       "@type": "Person",
+       "name": "Jung"
+     },
+     "publisher": {
+       "@type": "Organization",
+       "name": "⚡ AMP SRI UI Team",
+       "logo": {
+         "@type": "ImageObject",
+         "url": "http://www.saraminbanner.co.kr//index/2017/12/p0vwca_pmm9-2rvxu5_p0mrmt6mb82rvxu5occ7spnewsubpng.png"
+       }
+     },
+     "description": "My first experience in an AMP world"
+    }
+    </script>
+</head>
+<body>
+<header class="headerbar">
+    <div role="button" on="tap:sidebar1.toggle" tabindex="0" class="hamburger">☰</div>
+    <div class="site-name">News Site</div>
+</header>
+<!-- [js-bug] https://github.com/ampproject/amp-by-example/issues/1341 -->
+<amp-sidebar id="sidebar1" layout="nodisplay" side="left">
+    <div role="button" aria-label="close sidebar" on="tap:sidebar1.toggle" tabindex="0" class="close-sidebar">✕</div>
+    <ul class="sidebar">
+        <li><a href="../index.html">index.html</a></li>
+        <li><a href="#">메뉴 2</a></li>
+        <li><a href="#">메뉴 3</a></li>
+    </ul>
+</amp-sidebar>
+<article>
+    <h1>Article Name</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas tortor sapien, non tristique ligula accumsan eu.</p>
+
+    <h2>amp-img</h2>
+    <amp-img src="../images/mountains.jpg" layout="responsive" width="266" height="150"></amp-img>
+</article>
+</body>
+</html>
