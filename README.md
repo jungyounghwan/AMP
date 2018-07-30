@@ -1,4 +1,4 @@
-# AMP
+# AMP - https://www.ampproject.org/docs/
 
 #### 시작하기
  - 링크 : HTML을 AMP로 변환 https://www.ampproject.org/ko/docs/fundamentals/converting
