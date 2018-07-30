@@ -1,6 +1,6 @@
-#AMP
+# AMP
 
-####시작하기
+#### 시작하기
  - 링크 : HTML을 AMP로 변환 https://www.ampproject.org/ko/docs/fundamentals/converting
  
     1. AMP 사이트의 기초 마스터
@@ -13,8 +13,7 @@
     - HTML 페이지 : [converting.html](https://github.com/jungyounghwan/AMP/blob/master/canonical/converting.html)
     - AMP 페이지 : [converting_amp.html](https://github.com/jungyounghwan/AMP/blob/master/amphtml/converting_amp.html)
     
-    
-####기능추가1
+#### 기능추가1
  - 링크 : 고급 AMP 기능 추가 https://www.ampproject.org/ko/docs/fundamentals/add_advanced
  
     1. amp-ad를 사용하여 광고 표시
@@ -26,8 +25,8 @@
     - HTML 페이지 : [add_advanced.html](https://github.com/jungyounghwan/AMP/blob/master/amphtml/add_advanced.html)
     - AMP 페이지 : [add_advanced_amp.html](https://github.com/jungyounghwan/AMP/blob/master/amphtml/add_advanced_amp.html)
     
-####기능추가2
-  - 링크 : 고급 AMP 기능 추가
+#### 기능추가2
+  - 링크 : 고급 AMP 기능 추가 https://www.ampproject.org/docs/fundamentals/add_advanced/navigating
     1. amp-sidebar를 사용하여 사이트 탐색 기능 추가
     2. AMP에서 사용자 정의 글꼴을 사용
     
