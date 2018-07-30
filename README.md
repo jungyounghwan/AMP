@@ -6,8 +6,8 @@
     1. AMP 사이트의 기초 마스터
     2. AMP 페이지와 기존 HTML 페이지 간의 차이점 이해
     3. 기존 HTML 페이지를 AMP HTML로 전환
-    4. AMP 페이지 유효성 검사
-    5. 검색 가능한 AMP 컨텐츠 준비
+    4. AMP 페이지 유효성 검사 - #development=1
+    5. 검색 가능한 AMP 컨텐츠 준비 - [테스팅도구](https://search.google.com/structured-data/testing-tool/u/0/)
     
  - 테스트페이지 :
     - HTML 페이지 : [converting.html](https://github.com/jungyounghwan/AMP/blob/master/canonical/converting.html)
