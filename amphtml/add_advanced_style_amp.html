@@ -1,0 +1,100 @@
+<!doctype html>
+<html ⚡ lang="ko">
+<head>
+    <title>News Article</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <link rel="canonical" href="../canonical/add_advanced_sidebar_amp.html">
+    <link rel="shortcut icon" href="../images/amp_favicon.png">
+    <style amp-custom>
+        @import "../assets/css/style.min.css";
+        /*{% include "../assets/css/style.min.css" %}*/
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script> <!-- sidebar -->
+    <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script> <!-- el : lightbox -->
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script> <!-- iframe -->
+    <!-- data test : https://search.google.com/structured-data/testing-tool/u/0/ -->
+    <script type="application/ld+json">
+    {
+     "@context": "http://schema.org/",
+     "@type": "Article",
+     "mainEntityOfPage":{
+       "@type":"WebPage",
+       "@id":"http://www.saramin.co.kr"
+     },
+     "headline": "business information",
+     "image": {
+       "@type": "ImageObject",
+       "url": "http://www.saraminbanner.co.kr//index/2017/12/p0vwca_pmm9-2rvxu5_p0mrmt6mb82rvxu5occ7spnewsubpng.png",
+       "height": 110,
+       "width": 230
+     },
+     "datePublished": "2018-07-30",
+     "dateModified": "2018-07-30",
+     "author": {
+       "@type": "Person",
+       "name": "Jung"
+     },
+     "publisher": {
+       "@type": "Organization",
+       "name": "⚡ AMP SRI UI Team",
+       "logo": {
+         "@type": "ImageObject",
+         "url": "http://www.saraminbanner.co.kr//index/2017/12/p0vwca_pmm9-2rvxu5_p0mrmt6mb82rvxu5occ7spnewsubpng.png"
+       }
+     },
+     "description": "My first experience in an AMP world"
+    }
+    </script>
+</head>
+<body>
+<header class="headerbar">
+    <div role="button" on="tap:sidebar1.toggle" tabindex="0" class="hamburger">☰</div>
+    <div class="site-name">News Site</div>
+</header>
+<!-- [js-bug] https://github.com/ampproject/amp-by-example/issues/1341 -->
+<amp-sidebar id="sidebar1" layout="nodisplay" side="left">
+    <div role="button" aria-label="close sidebar" on="tap:sidebar1.toggle" tabindex="0" class="close-sidebar">✕</div>
+    <ul class="sidebar">
+        <li><a href="../index.html">index.html</a></li>
+        <li><a href="#">메뉴 2</a></li>
+        <li><a href="#">메뉴 3</a></li>
+    </ul>
+</amp-sidebar>
+<article>
+    <h1>Article Name</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas tortor sapien, non tristique ligula accumsan eu.</p>
+
+    <h2>Layout : nodisplay</h2>
+    <amp-lightbox layout="nodisplay">
+        영역이 보이지 않아요~
+    </amp-lightbox>
+
+    <h2>amp-img : fallback(IE8 이하 / IE9는 화면깨짐)</h2>
+    <amp-img src="../images/mountains.jpg" layout="responsive" width="266" height="150">
+        <div fallback>
+            <p>This browser does not support the amp-img element.</p>
+        </div>
+    </amp-img>
+
+    <h2>amp-img : noloading</h2>
+    <amp-img noloading src="../images/mountains.jpg" layout="responsive" width="266" height="150">
+        <div fallback>
+            <p>This browser does not support the amp-img element.</p>
+        </div>
+    </amp-img>
+
+    <h2>amp-iframe</h2>
+    <amp-iframe width="200" height="100" sandbox="allow-scripts allow-same-origin" layout="responsive" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDG9YXIhKBhqclZizcSzJ0ROiE0qgVfwzI&q=europe">
+        <!--<amp-img placeholder width="200" height="100" layout="responsive" src="https://ampproject-b5f4c.firebaseapp.com/examples/images/kittens-biting.jpg"></amp-img>-->
+    </amp-iframe>
+
+    <h2>amp-iframe : 자리표시자</h2>
+    <amp-iframe width="400" height="225" sandbox="allow-scripts allow-same-origin" layout="responsive" src="https://giphy.com/embed/OWabwoEn7ezug">
+        <amp-img placeholder width="400" height="225" layout="responsive" src="https://ampproject-b5f4c.firebaseapp.com/examples/images/kittens-biting.jpg"></amp-img>
+    </amp-iframe>
+</article>
+</body>
+</html>
