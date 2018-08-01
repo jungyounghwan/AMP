@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass-min": "node-sass ./assets/sass/style.scss ./assets/css/style.min.css --output-style compressed"
+    "sass-min": "node-sass ./assets/sass/style.scss ./assets/css/style.min.css --output-style compressed",
+    "gulp start": "gulp"
   },
   "repository": {
     "type": "git",
@@ -16,13 +17,21 @@
   "license": "ISC",
   "devDependencies": {
     "amphtml-validator": "^1.0.23",
-    "autoprefixer": "^9.0.2",
-    "fs": "0.0.1-security",
-    "gulp": "^3.9.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "del": "^3.0.0",
+    "gulp": "4.0.0",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^7.0.1",
     "gulp-clean-css": "^3.9.4",
+    "gulp-concat": "^2.6.1",
     "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.1",
-    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.1",
     "webpack": "^4.16.3",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5"
