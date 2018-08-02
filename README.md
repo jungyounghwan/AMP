@@ -7,7 +7,7 @@
     2. AMP 페이지와 기존 HTML 페이지 간의 차이점 이해
     3. 기존 HTML 페이지를 AMP HTML로 전환
     4. AMP 페이지 유효성 검사 - #development=1
-    5. 검색 가능한 AMP 컨텐츠 준비 - [테스팅도구](https://search.google.com/structured-data/testing-tool/u/0/)
+    5. 검색엔진을 위한 Schema 작성 - [테스팅도구](https://search.google.com/structured-data/testing-tool/u/0/)
     
  - 테스트페이지 :
     - HTML 페이지 : [converting.html](https://github.com/jungyounghwan/AMP/blob/master/canonical/converting.html)
@@ -41,7 +41,7 @@
         
             | 금지된 스타일 | 설명 |
             |---|:---:|
-            | `인라인 스타일 속성` | 모든 스타일은 페이지에서 &lt;head&gt; 의 &lt;style amp-custom&gt; 태그 내에 정의되어야 합니다. |
+            | ~~인라인 스타일 속성~~ | ~~모든 스타일은 페이지에서 &lt;head&gt; 의 &lt;style amp-custom&gt; 태그 내에 정의되어야 합니다.~~ |
             | `!important 한정자` | 사용할 수 없습니다. AMP 에서 요소 크기 조정 규칙을 시행하기 위한 필수 요구사항입니다. |
             | `<link rel="stylesheet">` | Disallowed with the exception of 맞춤 글꼴 이외의 경우에는 사용할 수 없습니다. |
             | `-amp- 클래스 및 i-amp- 태그 이름` | 작성자 스타일시트의 클래스 이름은 문자열 -amp- 로 시작할 수 없습니다. 이러한 문자열은 AMP 런타임에서 내부용으로만 사용할 수 있습니다. 따라서 사용자의 스타일시트는 -amp- 클래스 및 i-amp 태그의 CSS 선택기를 참조할 수 없습니다 |
@@ -52,6 +52,7 @@
             | `@keyframes {...}` | GPU 가속이 가능한 속성만 허용됨(현재 opacity, transform, -vendorPrefix-transform). |
 
         2. CSS 전처리기 사용 가능 : ERR - CSS syntax error in tag 'style amp-custom' - invalid declaration. 
+            1. ampproject 는 파이썬을 이용하여 사용하고 있음.
         
             ```html
             <style amp-custom>
