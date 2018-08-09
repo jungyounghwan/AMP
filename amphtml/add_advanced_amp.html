@@ -29,6 +29,7 @@
     <script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script> <!-- Tweet 삽입 -->
     <script async custom-element ="amp-fit-text" src ="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script > <!-- 반응형 글꼴 크기 조정 -->
     <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script> <!-- 이미지 슬라이드 -->
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script> <!-- 사용자 참여 추적 -->
     <!-- data test : https://search.google.com/structured-data/testing-tool/u/0/ -->
     <script type="application/ld+json">
     {
@@ -135,5 +136,25 @@
         </amp-fit-text>
     </amp-carousel>
 </article>
+
+<amp-analytics type="googleanalytics">
+    <script type="application/json">
+        {
+            "vars": {
+                "account": "UA-YYYY-Y"
+            },
+            "triggers": {
+                "default pageview": {
+                    "on": "visible",
+                    "request": "pageview",
+                    "vars": {
+                        "title": "Name of the Article"
+                    }
+                }
+            }
+        }
+    </script>
+</amp-analytics>
+
 </body>
 </html>

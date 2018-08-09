@@ -1,25 +1,41 @@
 # AMP - https://www.ampproject.org/docs/
 
+#### AMP(Accelerated Mobile Page)란
+ -  웹페이지를 빠르게 렌더링하는 방법
+    1. AMP가 제안하는 규칙을 따른다
+    2. AMP 내장 컴포넌트와 확장 컴포넌트를 사용
+    3. AMP html, AMP js 를 사용한 웹 페이지는 Google AMP Cache 에 저장되어 로딩 및 리소스 다운로드가 빠르다.
+    4. 외부 css 및 외부 js 를 사용할 수 없다.
+    5. css는 <style>태그로 내부에 삽입하며 크기를 50kb로 제한한다. 
+    6. javascript가 페이지 렌더링을 차단하는 것을 막기 위해 비동기 javascript만 허용한다.
+    7. 모든 정적 리소스의 크기를 미리 지정한다.(이미지, 광고, 인라인 프레임 등)
+    8. amp 는 웹 폰트를 다운로드 하기 전까지 어떠한 http 요청을 하지 않는다.
+    9. gpu 가속 애니메이션만 실행한다. (transform, transition, opacity)
+    10. 리소스 로딩 순서를 제어한다. (lazy load, pre-fetch)
+
 #### 시작하기
  - 링크 : HTML을 AMP로 변환 https://www.ampproject.org/ko/docs/fundamentals/converting
  
     1. AMP 사이트의 기초 마스터
     2. AMP 페이지와 기존 HTML 페이지 간의 차이점 이해
     3. 기존 HTML 페이지를 AMP HTML로 전환
-    4. AMP 페이지 유효성 검사 - #development=1
+    4. AMP 페이지 유효성 검사 - #development=1 : https://www.ampproject.org/docs/design/visual_story/validation
     5. 검색엔진을 위한 Schema 작성 - [테스팅도구](https://search.google.com/structured-data/testing-tool/u/0/)
     
  - 테스트페이지 :
     - HTML 페이지 : [converting.html](https://github.com/jungyounghwan/AMP/blob/master/canonical/converting.html)
     - AMP 페이지 : [converting_amp.html](https://github.com/jungyounghwan/AMP/blob/master/amphtml/converting_amp.html)
-    
+
+#### Component
+ - https://www.ampproject.org/docs/reference/components
+     
 #### 기능추가1
  - 링크 : 고급 AMP 기능 추가 https://www.ampproject.org/ko/docs/fundamentals/add_advanced
  
     1. amp-ad를 사용하여 광고 표시
     2. 유튜브 동영상, 트위터 카드, 반응적인 텍스트 요소 포함
     3. amp-carousel을 사용하여 이미지와 콘텐츠들의 조합으로 캐러셀을 구축
-    4. amp-analytics로 단순한 패턴들 추적 (하단참조)
+    ~~4. amp-analytics로 단순한 패턴들 추적 (하단참조)~~
     
   - 테스트페이지 :
     - HTML 페이지 : [add_advanced.html](https://github.com/jungyounghwan/AMP/blob/master/amphtml/add_advanced.html)
